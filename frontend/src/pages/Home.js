@@ -32,8 +32,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [eventsRes, leaderboardRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/events'),
-          axios.get('http://localhost:5000/api/leaderboard')
+          axios.get('http://localhost:5001/api/events'),
+          axios.get('http://localhost:5001/api/leaderboard')
         ]);
 
         // Get the next event (first one for now)
@@ -53,7 +53,7 @@ const Home = () => {
     if (!nextEvent) return;
     
     try {
-      await axios.post(`http://localhost:5000/api/events/${nextEvent.id}/rsvp`);
+      await axios.post(`http://localhost:5001/api/events/${nextEvent.id}/rsvp`);
       // Update the event locally
       setNextEvent(prev => ({
         ...prev,

@@ -39,7 +39,7 @@ const Events = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/events');
+      const response = await axios.get('http://localhost:5001/api/events');
       setEvents(response.data);
     } catch (error) {
       console.error('Error fetching events:', error);
@@ -50,7 +50,7 @@ const Events = () => {
 
   const handleRSVP = async (eventId) => {
     try {
-      await axios.post(`http://localhost:5000/api/events/${eventId}/rsvp`);
+      await axios.post(`http://localhost:5001/api/events/${eventId}/rsvp`);
       // Update the event locally
       setEvents(prev => prev.map(event => 
         event.id === eventId 

@@ -47,7 +47,7 @@ const BuddyChat = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/genz-buddy', {
+      const response = await axios.post('http://localhost:5001/api/genz-buddy', {
         prompt: inputText
       });
 

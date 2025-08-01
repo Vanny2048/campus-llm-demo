@@ -32,7 +32,7 @@ const GameDay = () => {
 
   const handleCheckIn = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/checkin', {
+      const response = await axios.post('http://localhost:5001/api/checkin', {
         user_id: 1, // Mock user ID
         event_id: 1
       });
