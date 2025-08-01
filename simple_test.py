@@ -13,7 +13,7 @@ def test_backend():
     
     try:
         # Test events endpoint
-        response = requests.get("http://localhost:5000/api/events", timeout=5)
+        response = requests.get("http://localhost:5001/api/events", timeout=5)
         if response.status_code == 200:
             events = response.json()
             print(f"✅ Backend is working! Found {len(events)} events")

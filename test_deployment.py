@@ -15,7 +15,7 @@ def test_backend_api():
     """Test the Flask backend API endpoints"""
     print("🔧 Testing Backend API...")
     
-    base_url = "http://localhost:5000"
+    base_url = "http://localhost:5001"
     
     # Test events endpoint
     try:
